@@ -12,14 +12,16 @@ public class EntrepriseTest {
 		Employe e= new Employe("Jeff Bezos",2018);
 		Vendeur v=new Vendeur("Silver Blake",2015);
 		v.setCharge(100.5);
-		Manager m=new Manager("André Julien",2010);
+		Manager m=new Manager("Andre Julien",2010);
 		E.ajouter_employe(e);
 		E.ajouter_employe(v);
 		E.ajouter_employe(m);
 		
 		double res = 1700*2+1700*5+100.5+1700*10+100*1;
 		
-		assertEquals(res,E.calcule_salaire2(),0);
-		
-	}
+			assertTrue(res==E.calcule_salaire2());
+			}
+
+	
+
 }

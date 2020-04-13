@@ -9,7 +9,7 @@ public class Entreprise {
 	
 	/*
 	 * La fonction qui permet de calculer la somme des salaires
-	 *  des employés de l'entreprise
+	 *  des employï¿½s de l'entreprise
 	 *  
 	 * @return la sommme du salaire
 	 */
@@ -24,11 +24,11 @@ public class Entreprise {
 	
 
 	/*
-	 * Ajouter un employé à l'entreprise
-	 * @param E L'employé à ajouter
+	 * Ajouter un employï¿½ ï¿½ l'entreprise
+	 * @param E L'employï¿½ ï¿½ ajouter
 	 * 
 	 */
-	public void ajouter_employe(final Employe emp) {
+	public void ajouter_employe(Employe emp) {
 		this.lise_emp.add(emp);
 	}
 
