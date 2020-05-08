@@ -1,50 +1,56 @@
 import java.util.Calendar;
-
-public class Employe {
+/*
+ * Cette classe repr√©sente un employ√© d'une entreprise quelconque.
+ * Chaque employ√© poss√®de un nom "nom_emp", la date d'arriv√©e de l'employ√© dans 
+ * l'entreprise "annee_arrivee" et son salaire de base "salaire_de_base"
+ * fix√© 1500¬£.
+ * 
+ * @author ZAOUAM Sirageddibe
+ * @version 2.0
+ */
+public class Employe extends Personnel_salarie {
 	/*
-	 * Le nom de l'employÈ.
-	 */
-	private final String nom_emp;
-	/*
-	 * Lannee d'arrivee
-	 */
-	private final int annee_arrivee;
-	/*
-	 * Le salaire de base qui est Ègale ‡ 1500 + 200
-	 */
-	public static final int SALAIRE_DE_BASE = 1700;
-	/*
-	 * Le constructeur de la calsse Employe.
-	 * @param nom est le nom de l'employÈ
-	 
-	 
-	 * @param annee est l'annÈe d'arrivÈe de l'employÈ
+	 * Le constructeur de la calsse Employ√©.
+	 * @param nom est le nom de l'employ√©
+	 * @param annee est l'ann√©e d'arriv√©e de l'employ√©
 	 */
 	public Employe(final String nom_emp, final int annee_emp) {
+		super(1500);
 		this.nom_emp = nom_emp;
 		this.annee_arrivee = annee_emp;
 	}
+	/*
+	 * Retourne le nom de l'employ√©
+	 * @return le nom de l'employe
+	 */
 	public String getNom() {
 		return nom_emp;
 	}
 	/*
-	 * Fontion qui calcule le salaire d'un employÈ.
-	 * @return le salaire de l'employÈ en fonction de son anciennetÈ
+	 * Retourne la date d'arriv√© de l'employ√©
+	 * @return l'ann√©e d'arriv√©e
+	 */
+	public int getDate_arrivee() {
+		return annee_arrivee;
+	}
+	/*
+	 * Fontion qui calcule le salaire d'un employ√©.
+	 * @return le salaire de l'employ√© en fonction de son anciennet√©
 	 */
 	public double calculer_salaire() {
 		Calendar c = Calendar.getInstance();
 		
 		int anneeCourante = c.get(Calendar.YEAR);
-		int res= SALAIRE_DE_BASE * (anneeCourante - annee_arrivee);
+		double res= salaire_de_base + (anneeCourante - annee_arrivee) *20;
 		
 		return res;
 	}
 	/*
-	 * Fontion qui renvoie le salaire de base d'un employÈ.
-	 * @return le salaire de l'employÈ
+	 * Fontion qui renvoie le salaire de base d'un employ√©.
+	 * @return le salaire de l'employ√©
 	 */
-	public int getSalaire() {
-		return SALAIRE_DE_BASE;
+	public double getSalaire() {
+		return salaire_de_base;
 	}
 	
 

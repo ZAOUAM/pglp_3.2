@@ -1,7 +1,13 @@
-
-public class Vendeur extends Employe {
+/*
+ * La classe vendeur représente un personnel salarié. 
+ * Chaque vendeur a une commision de vente propre à lui.
+ * 
+ * @author ZAOUAM Sirageddine
+ * @version 2.0
+ */
+public class Vendeur extends Personnel_salarie {
 	/*
-	 * La charge d'un vendeur
+	 * La charge d'un vendeur ou commission
 	 */
 	private double charge;
 	/*
@@ -12,24 +18,23 @@ public class Vendeur extends Employe {
 	 * dans l'entreprise
 	 */
 	public Vendeur(final String nom, final int annee) {
-		super(nom, annee);
+		super(1500);
+		this.nom_emp=nom;
+		this.annee_arrivee=annee;
 		this.charge = 0;
 	}
-	
-	
 	/*
-	 * M�thode qui d�finit la charge du vendeur;
+	 * Méthode pour modifier la charge du vendeur.
 	 */
 	public void setCharge(final double charge) {
 		this.charge = charge;
-	}
-	
+	}	
 	/*
-	 * La fonction qui calcule le salaire du vendeur avec la charge
+	 * La fonction qui calcule le salaire du vendeur avec la charge.
+	 * @return le salaire
 	 */
 	@Override
 	public double calculer_salaire() {
-		return super.calculer_salaire() + charge;
+		return salaire_de_base + charge;
 	}
-
 }

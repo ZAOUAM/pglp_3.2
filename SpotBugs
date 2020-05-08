@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.1" sequence="0" timestamp="-1" analysisTimestamp="1588945362213" release="">
+  <Project>
+    <WrkDir>C:\Users\Win10\Documents\eclipse-workspace\.metadata\.plugins\com.github.spotbugs.plugin.eclipse</WrkDir>
+  </Project>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Fri, 8 May 2020 15:42:42 +0200" total_classes="0" referenced_classes="0" total_bugs="0" total_size="0" num_packages="0" java_version="14" vm_version="14+36-1461" cpu_seconds="7.27" clock_seconds="61.12" peak_mbytes="417.22" alloc_mbytes="2048.00" gc_seconds="0.01">
+    <FindBugsProfile></FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

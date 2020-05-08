@@ -1,35 +1,49 @@
 import java.util.ArrayList;
-
+/*
+ * Cette classe représente une entreprise qui embauche des employés tels que des manageurs, 
+ * des vendeurs, ect. Le but est de calculer la somme globale des salaires de l'entreprise.
+ * 
+ * @author ZAOUAM Sirageddine
+ * @version 2.0
+ */
 public class Entreprise {
-	
-	private ArrayList<Employe> lise_emp;
+	/*
+	 * La liste des employés de l'entreprise.
+	 */
+	private ArrayList<Personnel_salarie> lise_emp;
+	/*
+	 * Le constructeur de la classe.
+	 */
 	public Entreprise() {
-		lise_emp = new ArrayList<Employe>();
+		lise_emp = new ArrayList<Personnel_salarie>();
 	}
-	
+	/*
+	 * Ajouter un employé à l'entreprise
+	 * @param E L'employé à ajouter
+	 * 
+	 */
+	public void ajouter_employe(Personnel_salarie emp) {
+		this.lise_emp.add(emp);
+	}
+	/*
+	 * supprimer un employé de l'entreprise
+	 * @param E L'employé à supprimer
+	 * 
+	 */
+	public void remove_employe(Personnel_salarie emp) {
+		this.lise_emp.remove(emp);
+	}
 	/*
 	 * La fonction qui permet de calculer la somme des salaires
-	 *  des employ�s de l'entreprise
-	 *  
+	 * des employés de l'entreprise.
 	 * @return la sommme du salaire
 	 */
-	public double calcule_salaire2() {
+	public double calculer_salaire_entreprise() {
 		double somme;
 		somme = 0;
-		for (Employe emp: lise_emp) {
+		for (Personnel_salarie emp: lise_emp) {
 			somme = somme + emp.calculer_salaire();
 		}
 		return somme;
 	}
-	
-
-	/*
-	 * Ajouter un employ� � l'entreprise
-	 * @param E L'employ� � ajouter
-	 * 
-	 */
-	public void ajouter_employe(Employe emp) {
-		this.lise_emp.add(emp);
-	}
-
 }
